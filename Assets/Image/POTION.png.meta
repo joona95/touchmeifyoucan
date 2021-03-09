@@ -1,37 +1,28 @@
 fileFormatVersion: 2
-guid: 7e074e6da439d1c4d897f48b8aefa1bc
+guid: b21279df737f5774bbc04bbbf879c1cb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -205270267638800340
-    second: heart_0
+      213: 566318709186932528
+    second: POTION_0
   - first:
-      213: 7904136456745960365
-    second: heart_1
+      213: -2304381719418411378
+    second: POTION_1
   - first:
-      213: 6960772035834626590
-    second: heart_2
+      213: 8792670407340799396
+    second: POTION_2
   - first:
-      213: -7403393265459281337
-    second: heart_3
+      213: -6070091637953793023
+    second: POTION_3
   - first:
-      213: -3830260593909529575
-    second: heart_4
+      213: -8770559346757194716
+    second: POTION_4
   - first:
-      213: 7694531943161221939
-    second: heart_5
+      213: -7239101426906713195
+    second: POTION_5
   - first:
-      213: 4729818260483457387
-    second: heart_6
-  - first:
-      213: 3128560658419286586
-    second: heart_7
-  - first:
-      213: 7301465457164268856
-    second: heart_8
-  - first:
-      213: 7042384109676019114
-    second: heart_9
+      213: 4159896126656924860
+    second: POTION_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -117,7 +108,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: heart_0
+      name: POTION_0
       rect:
         serializedVersion: 2
         x: 0
@@ -131,14 +122,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c20a07677cbb62df0800000000000000
-      internalID: -205270267638800340
+      spriteID: 03faeb29dd7fbd700800000000000000
+      internalID: 566318709186932528
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: heart_1
+      name: POTION_1
       rect:
         serializedVersion: 2
         x: 340
@@ -152,14 +143,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: da3ce80ca3221bd60800000000000000
-      internalID: 7904136456745960365
+      spriteID: e86692b09013500e0800000000000000
+      internalID: -2304381719418411378
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: heart_2
+      name: POTION_2
       rect:
         serializedVersion: 2
         x: 680
@@ -173,14 +164,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e12456e6941a99060800000000000000
-      internalID: 6960772035834626590
+      spriteID: 4a533a06627d50a70800000000000000
+      internalID: 8792670407340799396
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: heart_3
+      name: POTION_3
       rect:
         serializedVersion: 2
         x: 1020
@@ -194,14 +185,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 742c7c7cc0dd14990800000000000000
-      internalID: -7403393265459281337
+      spriteID: 104f1b5e0d3b2cba0800000000000000
+      internalID: -6070091637953793023
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: heart_4
+      name: POTION_4
       rect:
         serializedVersion: 2
         x: 1360
@@ -215,14 +206,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 91488de884e28dac0800000000000000
-      internalID: -3830260593909529575
+      spriteID: 42c2e071eb6b84680800000000000000
+      internalID: -8770559346757194716
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: heart_5
+      name: POTION_5
       rect:
         serializedVersion: 2
         x: 1700
@@ -236,14 +227,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3335501f80878ca60800000000000000
-      internalID: 7694531943161221939
+      spriteID: 593b33c4b9b898b90800000000000000
+      internalID: -7239101426906713195
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: heart_6
+      name: POTION_6
       rect:
         serializedVersion: 2
         x: 2040
@@ -257,71 +248,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b61c544f5a0b3a140800000000000000
-      internalID: 4729818260483457387
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: heart_7
-      rect:
-        serializedVersion: 2
-        x: 2380
-        y: 0
-        width: 340
-        height: 330
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a32085fc751ea6b20800000000000000
-      internalID: 3128560658419286586
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: heart_8
-      rect:
-        serializedVersion: 2
-        x: 2720
-        y: 0
-        width: 340
-        height: 330
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 835bf020624045560800000000000000
-      internalID: 7301465457164268856
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: heart_9
-      rect:
-        serializedVersion: 2
-        x: 3060
-        y: 0
-        width: 340
-        height: 330
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: aad381d19039bb160800000000000000
-      internalID: 7042384109676019114
+      spriteID: cbcc8e3bc7beab930800000000000000
+      internalID: 4159896126656924860
       vertices: []
       indices: 
       edges: []

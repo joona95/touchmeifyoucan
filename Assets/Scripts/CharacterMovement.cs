@@ -26,8 +26,11 @@ public class CharacterMovement : MonoBehaviour
     public GameObject chatText;
     public GameObject helperChatBox;
     public GameObject text1, text2, text3, text4;
+    public GameObject gameOver, success;
 
     public bool hasson = false;
+    public bool feverMode = false;
+    public bool smallMode = false;
     // Update is called once per frame
     void Update()
     {
@@ -40,27 +43,27 @@ public class CharacterMovement : MonoBehaviour
         {
             if (coinCount == 5 || ChatboxCount == 5)
             {
-                SceneManager.LoadScene("Tutorial2");
-                notDestroy.level++;
-                notDestroy.tutorial = true;
+                success.SetActive(true);
+                StartCoroutine(Success1());
+                
             }
         }
         else if (notDestroy.level == 1)
         {
-            if (coinCount == 7 || ChatboxCount == 5)
+            if (coinCount == 9 || ChatboxCount == 5)
             {
-                SceneManager.LoadScene("Tutorial3");
-                notDestroy.level++;
-                notDestroy.tutorial = true;
+                success.SetActive(true);
+                StartCoroutine(Success2());
+                
             }
         }
         else
         {
             if (ChatboxCount == 7)
             {
-                SceneManager.LoadScene("beforeEnding");
-                notDestroy.level++;
-                notDestroy.tutorial = true;
+                success.SetActive(true);
+                StartCoroutine(Success3());
+                
             }
         }
 
@@ -69,14 +72,9 @@ public class CharacterMovement : MonoBehaviour
         if (limitTime <= 0f)
         {
             //Time.timeScale = 0f;
-            if(notDestroy.level==0)
-                SceneManager.LoadScene("Tutorial");
-            else if (notDestroy.level == 1)
-                SceneManager.LoadScene("Tutorial2");
-            else if (notDestroy.level == 2)
-                SceneManager.LoadScene("Tutorial3");
-
-            notDestroy.tutorial = true;
+            gameOver.SetActive(true);
+            StartCoroutine(GameOver());
+            
         }
 
 
@@ -84,13 +82,22 @@ public class CharacterMovement : MonoBehaviour
         {
             CameraMovement.start = false;
             this.gameObject.GetComponent<SpriteRenderer>().flipX = true;
+            if (notDestroy.level == 1)
+                this.gameObject.transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().flipX = true;
             transform.Translate(-speed * Time.deltaTime, 0, 0);
             if (!isLeft)
             {
                 isRight = false;
-                float x = this.gameObject.GetComponent<BoxCollider2D>().offset.x + 1.1f;
-                float y = this.gameObject.GetComponent<BoxCollider2D>().offset.y;
-                this.gameObject.GetComponent<BoxCollider2D>().offset = new Vector2(x, y);
+                //float x = this.gameObject.GetComponent<BoxCollider2D>().offset.x + 1.1f;
+                //float y = this.gameObject.GetComponent<BoxCollider2D>().offset.y;
+                if(!smallMode)
+                    this.gameObject.GetComponent<BoxCollider2D>().offset = new Vector2(0.6f, this.gameObject.GetComponent<BoxCollider2D>().offset.y);
+                else
+                {
+                    this.gameObject.GetComponent<BoxCollider2D>().offset = new Vector2(-0.2f, -0.8f);
+                    this.gameObject.GetComponent<BoxCollider2D>().size = new Vector2(1.5f, 1.5f);
+                }
+
                 Debug.Log(this.gameObject.GetComponent<BoxCollider2D>().offset.x);
                 isLeft = true;
             }
@@ -99,13 +106,21 @@ public class CharacterMovement : MonoBehaviour
         {
             CameraMovement.start = false;
             this.gameObject.GetComponent<SpriteRenderer>().flipX = false;
+            if (notDestroy.level==1)
+                this.gameObject.transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>().flipX = false;
             transform.Translate(speed * Time.deltaTime, 0, 0);
             if (!isRight)
             {
                 isLeft = false;
-                float x = this.gameObject.GetComponent<BoxCollider2D>().offset.x - 1.1f;
-                float y = this.gameObject.GetComponent<BoxCollider2D>().offset.y;
-                this.gameObject.GetComponent<BoxCollider2D>().offset = new Vector2(x, y);
+                //float x = this.gameObject.GetComponent<BoxCollider2D>().offset.x - 1.1f;
+                //float y = this.gameObject.GetComponent<BoxCollider2D>().offset.y;
+                if (!smallMode)
+                    this.gameObject.GetComponent<BoxCollider2D>().offset = new Vector2(-0.5f, this.gameObject.GetComponent<BoxCollider2D>().offset.y);
+                else
+                {
+                    this.gameObject.GetComponent<BoxCollider2D>().offset = new Vector2(0.2f, -0.8f);
+                    this.gameObject.GetComponent<BoxCollider2D>().size = new Vector2(1.5f, 1.5f);
+                }
                 Debug.Log(this.gameObject.GetComponent<BoxCollider2D>().offset.x);
                 isRight = true;
             }
@@ -117,8 +132,10 @@ public class CharacterMovement : MonoBehaviour
             if (!isJumping)
             {
                 isJumping = true;
-                this.gameObject.GetComponent<Animator>().SetTrigger("jump");
-                this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, jumpPower), ForceMode2D.Impulse);
+                if (!smallMode)
+                    this.gameObject.GetComponent<Animator>().SetTrigger("jump");
+                //this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, jumpPower), ForceMode2D.Impulse);
+                this.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.up * jumpPower;
             }
                 
         }
@@ -135,7 +152,7 @@ public class CharacterMovement : MonoBehaviour
             if(notDestroy.level == 0)
                 coinText.GetComponent<Text>().text = coinCount + "/5";
             else if(notDestroy.level == 1)
-                coinText.GetComponent<Text>().text = coinCount + "/7";
+                coinText.GetComponent<Text>().text = coinCount + "/9";
             Destroy(collision.gameObject);
         }
         if (collision.gameObject.tag == "Chatbox")
@@ -147,11 +164,33 @@ public class CharacterMovement : MonoBehaviour
                 chatText.GetComponent<Text>().text = ChatboxCount + "/7";
             Destroy(collision.gameObject);
         }
+        if (collision.gameObject.tag == "fever")
+        {
+            Destroy(collision.gameObject);
+            feverMode = true;
+            this.gameObject.transform.GetChild(0).gameObject.SetActive(true);
+        }
+        if (collision.gameObject.tag == "potion")
+        {
+            Destroy(collision.gameObject);
+            smallMode = true;
+            this.gameObject.GetComponent<Animator>().SetTrigger("small");
+            
+        }
         if (collision.gameObject.tag == "jumpWall")
         {
             isJumping = false;
             this.gameObject.GetComponent<Animator>().SetTrigger("jump");
             this.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0f, jumpPower), ForceMode2D.Impulse);
+        }
+        if (collision.gameObject.tag == "brokeWall")
+        {
+            isJumping = false;
+            if (feverMode == true)
+            {
+                collision.gameObject.SetActive(false);
+            }
+            
         }
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -203,5 +242,47 @@ public class CharacterMovement : MonoBehaviour
             
         }
             
+    }
+
+    IEnumerator Success1()
+    {
+        yield return new WaitForSeconds(5.0f);
+        notDestroy.level++;
+        notDestroy.tutorial = true;
+        SceneManager.LoadScene("Tutorial2");
+        
+    }
+
+    IEnumerator Success2()
+    {
+        yield return new WaitForSeconds(5.0f);
+        notDestroy.level++;
+        notDestroy.tutorial = true;
+        SceneManager.LoadScene("Tutorial3");
+        
+    }
+
+    IEnumerator Success3()
+    {
+        yield return new WaitForSeconds(5.0f);
+        notDestroy.level++;
+        notDestroy.tutorial = true;
+        SceneManager.LoadScene("beforeEnding");
+        
+    }
+
+    IEnumerator GameOver()
+    {
+        yield return new WaitForSeconds(5.0f);
+        notDestroy.tutorial = true;
+
+        if (notDestroy.level == 0)
+            SceneManager.LoadScene("Tutorial");
+        else if (notDestroy.level == 1)
+            SceneManager.LoadScene("Tutorial2");
+        else if (notDestroy.level == 2)
+            SceneManager.LoadScene("Tutorial3");
+
+        
     }
 }

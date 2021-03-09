@@ -1,37 +1,25 @@
 fileFormatVersion: 2
-guid: 7e074e6da439d1c4d897f48b8aefa1bc
+guid: a7ff0714a813d2047a442b1f84c0932a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -205270267638800340
-    second: heart_0
+      213: -7495487175984836587
+    second: JUMP HEART_0
   - first:
-      213: 7904136456745960365
-    second: heart_1
+      213: -1948223829081341260
+    second: JUMP HEART_1
   - first:
-      213: 6960772035834626590
-    second: heart_2
+      213: 3009813764743535959
+    second: JUMP HEART_2
   - first:
-      213: -7403393265459281337
-    second: heart_3
+      213: -6675767613890189317
+    second: JUMP HEART_3
   - first:
-      213: -3830260593909529575
-    second: heart_4
+      213: -7561698383053019597
+    second: JUMP HEART_4
   - first:
-      213: 7694531943161221939
-    second: heart_5
-  - first:
-      213: 4729818260483457387
-    second: heart_6
-  - first:
-      213: 3128560658419286586
-    second: heart_7
-  - first:
-      213: 7301465457164268856
-    second: heart_8
-  - first:
-      213: 7042384109676019114
-    second: heart_9
+      213: 5439139184659120409
+    second: JUMP HEART_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -117,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: heart_0
+      name: JUMP HEART_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 340
-        height: 330
+        width: 440
+        height: 380
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c20a07677cbb62df0800000000000000
-      internalID: -205270267638800340
+      spriteID: 5109de0502eaaf790800000000000000
+      internalID: -7495487175984836587
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: heart_1
+      name: JUMP HEART_1
       rect:
         serializedVersion: 2
-        x: 340
+        x: 440
         y: 0
-        width: 340
-        height: 330
+        width: 440
+        height: 380
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,20 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: da3ce80ca3221bd60800000000000000
-      internalID: 7904136456745960365
+      spriteID: 4b2c7a4efb486f4e0800000000000000
+      internalID: -1948223829081341260
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: heart_2
+      name: JUMP HEART_2
       rect:
         serializedVersion: 2
-        x: 680
+        x: 880
         y: 0
-        width: 340
-        height: 330
+        width: 440
+        height: 380
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,20 +161,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e12456e6941a99060800000000000000
-      internalID: 6960772035834626590
+      spriteID: 75d9e9f1ca105c920800000000000000
+      internalID: 3009813764743535959
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: heart_3
+      name: JUMP HEART_3
       rect:
         serializedVersion: 2
-        x: 1020
+        x: 1320
         y: 0
-        width: 340
-        height: 330
+        width: 440
+        height: 380
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,20 +182,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 742c7c7cc0dd14990800000000000000
-      internalID: -7403393265459281337
+      spriteID: bf7a40399b8ea53a0800000000000000
+      internalID: -6675767613890189317
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: heart_4
+      name: JUMP HEART_4
       rect:
         serializedVersion: 2
-        x: 1360
+        x: 1760
         y: 0
-        width: 340
-        height: 330
+        width: 440
+        height: 380
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,20 +203,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 91488de884e28dac0800000000000000
-      internalID: -3830260593909529575
+      spriteID: 336aa7b52637f0790800000000000000
+      internalID: -7561698383053019597
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: heart_5
+      name: JUMP HEART_5
       rect:
         serializedVersion: 2
-        x: 1700
+        x: 2200
         y: 0
-        width: 340
-        height: 330
+        width: 440
+        height: 380
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -236,92 +224,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3335501f80878ca60800000000000000
-      internalID: 7694531943161221939
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: heart_6
-      rect:
-        serializedVersion: 2
-        x: 2040
-        y: 0
-        width: 340
-        height: 330
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b61c544f5a0b3a140800000000000000
-      internalID: 4729818260483457387
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: heart_7
-      rect:
-        serializedVersion: 2
-        x: 2380
-        y: 0
-        width: 340
-        height: 330
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a32085fc751ea6b20800000000000000
-      internalID: 3128560658419286586
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: heart_8
-      rect:
-        serializedVersion: 2
-        x: 2720
-        y: 0
-        width: 340
-        height: 330
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 835bf020624045560800000000000000
-      internalID: 7301465457164268856
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: heart_9
-      rect:
-        serializedVersion: 2
-        x: 3060
-        y: 0
-        width: 340
-        height: 330
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: aad381d19039bb160800000000000000
-      internalID: 7042384109676019114
+      spriteID: 911c3894544bb7b40800000000000000
+      internalID: 5439139184659120409
       vertices: []
       indices: 
       edges: []

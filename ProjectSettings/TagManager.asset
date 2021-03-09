@@ -12,6 +12,9 @@ TagManager:
   - sonsugen
   - Cry
   - jumpWall
+  - brokeWall
+  - fever
+  - potion
   layers:
   - Default
   - TransparentFX
